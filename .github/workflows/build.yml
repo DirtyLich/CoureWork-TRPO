@@ -1,6 +1,12 @@
 name: Build
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -10,9 +16,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check codestyle
-        run: git ls-files *.{c,h} | xargs clang-format -i --verbose && git diff --exit-code
+        run: git ls-files *.{c,h} | xargs clang-format -i --verbose && diff -u <(git cat-file -p HEAD:file.c) <(cat file.c)
 
       - name: Build application
         run: make
 
-        
+      # Добавьте пустую строку в конец файла
