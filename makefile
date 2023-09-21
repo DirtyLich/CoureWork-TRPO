@@ -1,28 +1,32 @@
+# Содержимое файла makefile
+
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
-LDFLAGS =
+CFLAGS = -Wall -Wextra
 
-# Первая задача: сборка приложения для простого использования
-app: coursework.o main.o
-$(CC) $(LDFLAGS) -o app coursework.o main.o
+# Правильное форматирование для цели "app"
+app: main.o coursework.o
+    $(CC) $(CFLAGS) -o app main.o coursework.o
 
-coursework.o: coursework.c coursework.h
-$(CC) $(CFLAGS) -c coursework.c
+# Правильное форматирование для цели "test"
+test: test.o coursework.o
+    $(CC) $(CFLAGS) -o test test.o coursework.o
 
-main.o: main.c coursework.h
-$(CC) $(CFLAGS) -c main.c
-
-# Вторая задача: запуск тестов
-test: coursework.o test.o
-$(CC) $(LDFLAGS) -o test coursework.o test.o
-
-test.o: test.c coursework.h test.h
-$(CC) $(CFLAGS) -c test.c
-
-# Общие зависимости
-coursework.o: coursework.h
-main.o: coursework.h
-test.o: coursework.h test.h
-
+# Правильное форматирование для цели "clean"
 clean:
-rm -f app test *.o
+    rm -f *.o app test
+# Содержимое файла makefile
+
+CC = gcc
+CFLAGS = -Wall -Wextra
+
+# Правильное форматирование для цели "app"
+app: main.o coursework.o
+    $(CC) $(CFLAGS) -o app main.o coursework.o
+
+# Правильное форматирование для цели "test"
+test: test.o coursework.o
+    $(CC) $(CFLAGS) -o test test.o coursework.o
+
+# Правильное форматирование для цели "clean"
+clean:
+    rm -f *.o app test
