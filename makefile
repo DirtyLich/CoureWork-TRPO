@@ -1,32 +1,14 @@
-# Содержимое файла makefile
+app: coursework.o main.o
+$(CC) $(LDFLAGS) -o app coursework.o main.o
 
-CC = gcc
-CFLAGS = -Wall -Wextra
+coursework.o: coursework.c coursework.h
+$(CC) $(CFLAGS) -c coursework.c
 
-# Правильное форматирование для цели "app"
-app: main.o coursework.o
-    $(CC) $(CFLAGS) -o app main.o coursework.o
+main.o: main.c coursework.h
+$(CC) $(CFLAGS) -c main.c
 
-# Правильное форматирование для цели "test"
-test: test.o coursework.o
-    $(CC) $(CFLAGS) -o test test.o coursework.o
+test: coursework.o test.o
+$(CC) $(LDFLAGS) -o test coursework.o test.o
 
-# Правильное форматирование для цели "clean"
-clean:
-    rm -f *.o app test
-# Содержимое файла makefile
-
-CC = gcc
-CFLAGS = -Wall -Wextra
-
-# Правильное форматирование для цели "app"
-app: main.o coursework.o
-    $(CC) $(CFLAGS) -o app main.o coursework.o
-
-# Правильное форматирование для цели "test"
-test: test.o coursework.o
-    $(CC) $(CFLAGS) -o test test.o coursework.o
-
-# Правильное форматирование для цели "clean"
-clean:
-    rm -f *.o app test
+test.o: test.c coursework.h test.h
+$(CC) $(CFLAGS) -c test.c
