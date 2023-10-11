@@ -4,7 +4,7 @@
 
 float result;
 // Функция для конвертации САНТИМЕТРОВ
-int convertSM(float value, char choise)
+float convertSM(float value, char choise)
 {
         switch (choise)
         {
@@ -28,9 +28,11 @@ int convertSM(float value, char choise)
 
                 break;
         }
+
+        return 0;
 }
 // Функция для конвертации МЕТРОВ
-int convertationM(float value, char choise)
+float convertationM(float value, char choise)
 {
         switch (choise)
         {
@@ -52,10 +54,13 @@ int convertationM(float value, char choise)
 
         default:
                 break;
+
+        
         }
+        return 0;
 }
 // функция для конвертации МИЛЛИМЕТРОВ
-int convertMM(float value, char choice)
+float convertMM(float value, char choice)
 {
         switch (choice)
         {
@@ -74,10 +79,13 @@ int convertMM(float value, char choice)
 
         default:
                 break;
+
+        
         }
+        return 0;
 }
 // функция для конвертации ЦЕЛЬСИЯ
-int convertC(float value, char choice)
+float convertC(float value, char choice)
 {
         switch (choice)
         {
@@ -91,9 +99,10 @@ int convertC(float value, char choice)
         default:
                 break;
         }
+        return 0;
 }
 // функция для конвертации КЕЛЬВИНЫ
-int convertK(float value, char choise)
+float convertK(float value, char choise)
 {
         switch (choise)
         {
@@ -106,11 +115,14 @@ int convertK(float value, char choise)
 
         default:
                 break;
+
+        
         }
+        return 0;
 }
 
 // функция для ФАРЕНГЕЙТ
-int convertF(float value, char choise)
+float convertF(float value, char choise)
 {
         switch (choise)
         {
@@ -124,9 +136,10 @@ int convertF(float value, char choise)
         default:
                 break;
         }
+        return 0;
 }
 // функция для КИЛОГРАММОВ
-int convertKG(float value, char choise)
+float convertKG(float value, char choise)
 {
         switch (choise)
         {
@@ -148,12 +161,13 @@ int convertKG(float value, char choise)
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
+                
                 break;
         }
+        return 0;
 }
 // функция для ГРАММОВ
-int convertGR(float value, char choice)
+float convertGR(float value, char choice)
 {
         switch (choice)
         {
@@ -181,9 +195,10 @@ int convertGR(float value, char choice)
         default:
                 break;
         }
+        return 0;
 }
 // функция для ЦЕНТНЕРОВ
-int convertHW(float value, char choice)
+float convertHW(float value, char choice)
 {
         switch (choice)
         {
@@ -208,9 +223,10 @@ int convertHW(float value, char choice)
                 
                 break;
         }
+        return 0;
 }
 // функция для СЕКУНД
-int convertSEC(float value, char choice)
+float convertSEC(float value, char choice)
 {
         switch (choice)
         {
@@ -239,9 +255,10 @@ int convertSEC(float value, char choice)
                 
                 break;
         }
+        return 0;
 }
 // функция для МИНУТ
-int convertMIN(float value, char choice)
+float convertMIN(float value, char choice)
 {
         switch (choice)
         {
@@ -270,9 +287,10 @@ int convertMIN(float value, char choice)
                 
                 break;
         }
+        return 0;
 }
 // функция для ЧАСОВ
-int convertHOUR(float value, char choice)
+float convertHOUR(float value, char choice)
 {
         switch (choice)
         {
@@ -301,9 +319,10 @@ int convertHOUR(float value, char choice)
                 
                 break;
         }
+        return 0;
 }
 // функция для ДНЕЙ
-int convertDAY(float value, char choice)
+float convertDAY(float value, char choice)
 {
         switch (choice)
         {
@@ -326,9 +345,10 @@ int convertDAY(float value, char choice)
         default:
                 break;
         }
+        return 0;
 }
 // функция для конвертации МЕСЯЦА
-int convertMONTH(float value, char choice)
+float convertMONTH(float value, char choice)
 {
         switch (choice)
         {
@@ -351,9 +371,10 @@ int convertMONTH(float value, char choice)
         default:
                 break;
         }
+        return 0;
 }
 // функция для конвертации года
-int convertYEAR(float value, char choice)
+float convertYEAR(float value, char choice)
 {
         switch (choice)
         {
@@ -376,4 +397,5 @@ int convertYEAR(float value, char choice)
         default:
                 break;
         }
+        return 0;
 }
