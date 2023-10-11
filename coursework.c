@@ -1,6 +1,6 @@
 // реализация наших функций
 #include <stdio.h>
-#include "courcework.h"
+#include "coursework.h"
 
 float result;
 // Функция для конвертации САНТИМЕТРОВ
