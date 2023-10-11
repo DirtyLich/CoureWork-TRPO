@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "courcework.h"
+#include "coursework.h"
 #include <string.h>
 #include <ctype.h>
 
@@ -159,25 +159,25 @@ int main()
             convertSM(value, choice);
             printf("\n\n");
 <<<<<<< HEAD
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Seconds is equal to %.3f Minutes. \n", value, result);
                 printf("+-----------------------------------------------------------+\n"); 
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f centimeters is equal to %.2f millimeters. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "c") {
+            else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f centimeters is equal to %.5f kilometers. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "d") {
+            else if (choice == 'd') {
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f centimeters is equal to %.2f decimeter. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
@@ -214,25 +214,25 @@ int main()
             printf("+---------------------------+\n");
             convertationM(value, choice);
             printf("\n\n");
-             if (choice == "a") {
+             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f meters is equal to %.2f centimeters. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
              }
-             else if (choice == "b") {
+             else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f meters is equal to %.3f kilometers. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
              }
-             else if (choice == "c") {
+             else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f meters is equal to %.5f miles. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
              }
-             else if (choice == "d") {
+             else if (choice == 'd') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f meters is equal to %.2f foot. \n", value, result);
@@ -262,25 +262,25 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertMM(value, choice);
-            if (choice == "a") {
+            if (choice == 'a') {
                  printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Millimeters is equal to %.2f Centimeters. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Millimeters is equal to %.2f Meters. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Millimeters is equal to %.2f Kilometers. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'd') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Millimeters is equal to %.5f Pouns. \n", value, result);
@@ -306,13 +306,13 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertC(value, choice);
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Celsius is equal to %.2f Fahrenheit. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Celsius is equal to %.2f Kelvins. \n", value, result);
@@ -338,13 +338,13 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertK(value, choice);
-             if (choice == "a") {
+             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f kelvin is equal to %.2f Fahrenheit. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
              }
-             else if (choice == "b") {
+             else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f kelvin is equal to %.2f Celsius. \n", value, result);
@@ -371,13 +371,13 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertF(value, choice);
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Fahrenheit is equal to %.2f Kelvin. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice =='b') {
                  printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Fahrenheit is equal to %.2f Celsius. \n", value, result);
@@ -794,31 +794,31 @@ int main()
             printf("+---------------------------+\n");
             convertDAY(value, choice);
 <<<<<<< HEAD
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.2f Seconds. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.2f Minutes. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "c") {
+            else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.2f Hours. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "d") {
+            else if (choice == 'd') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.3f Months. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "e") {
+            else if (choice == 'e') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.4f Years. \n", value, result);
@@ -853,31 +853,31 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertMONTH(value, choice);
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Months is equal to %.7f Seconds. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Months is equal to %.6f Minutes. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "c") {
+            else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Months is equal to %.2f Days. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "d") {
+            else if (choice == 'd') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Months is equal to %.2f Days. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "e") {
+            else if (choice == 'e') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Months is equal to %.2f Years. \n", value, result);
@@ -909,31 +909,31 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertYEAR(value, choice);
-            if (choice == "a") {
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Years is equal to %.8f Seconds. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "b") {
+            else if (choice == 'b') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Years is equal to %.7f Minutes. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "c") {
+            else if (choice == 'c') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Years is equal to %.4f Hours. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "d") {
+            else if (choice == 'd') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Years is equal to %.3f Days. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");
             }
-            else if (choice == "e") {
+            else if (choice == 'e') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Years is equal to %.2f Months. \n", value, result);
@@ -952,6 +952,7 @@ int main()
             isValidUnit = 1;
         }
     }
+
 
     return 0;
 }
