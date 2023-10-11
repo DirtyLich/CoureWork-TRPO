@@ -158,12 +158,10 @@ int main()
             printf("+---------------------------+\n");
             convertSM(value, choice);
             printf("\n\n");
-<<<<<<< HEAD
-
-            if (choice == 'a') {
+             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.3f Minutes. \n", value, result);
+                printf("| Your answer is: %.2f centimeters is equal to %.3f Meters. \n", value, result);
                 printf("+-----------------------------------------------------------+\n"); 
             }
             else if (choice == 'b') {
@@ -186,15 +184,7 @@ int main()
             else {
                 printf("| Invalid choice. |\n");
             }
-             isValidUnit = 1;
-
-            
             isValidUnit = 1;
-
-=======
-            
-            isValidUnit = 1;
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры(В ДДАННОМ СЛУЧАЕ МЕТРЫ!!)
@@ -798,12 +788,9 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertDAY(value, choice);
-<<<<<<< HEAD
 
             if (choice == 'a') {
-=======
-            if (choice == "a") {
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
+            if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.2f Seconds. \n", value, result);
@@ -836,10 +823,6 @@ int main()
             else {
                 printf("| Invalid choice. |\n");
             }
-<<<<<<< HEAD
-
-=======
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
             
             isValidUnit = 1;
         }
@@ -963,7 +946,7 @@ int main()
             isValidUnit = 1;
         }
     }
-
+    }
 
     return 0;
 }
