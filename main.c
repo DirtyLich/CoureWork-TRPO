@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "courcework.h"
+#include "coursework.h"
 #include <string.h>
 #include <ctype.h>
 
