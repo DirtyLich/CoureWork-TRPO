@@ -292,7 +292,7 @@ int main()
                 {
                  printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f centimeters is equal to %.2f meters. \n", value, result);
+                printf("| Your answer is: %.2f Kilograms is equal to %.2f Gramms. \n", value, result);
                 printf("+-----------------------------------------------------------+\n");   
                 }
 
