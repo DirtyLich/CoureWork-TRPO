@@ -132,31 +132,19 @@ int convertKG(float value, char choise)
         {
         case 'a':
                 result = value * 1000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Kilograms is equal to %.2f Grams. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'b':
                 result = value * 2.205;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Kilograms is equal to %.2f Pounds. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'c':
                 result = value * 1e+6;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Kilograms is equal to %.2f Miligrams. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'd':
                 result = value * 5000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Kilograms is equal to %.2f Carrats. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
@@ -171,42 +159,26 @@ int convertGR(float value, char choice)
         {
         case 'a':
                 result = value / 1000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Grams is equal to %.3f Kilograms. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'b':
                 result = value * 1000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Grams is equal to %.2f Miligrams. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+              
                 return result;
         case 'c':
                 result = value / 453.6;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Grams is equal to %.4f Pounds. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'd':
                 result = value * 5;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Grams is equal to %.2f Carrats. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'e':
                 result = value / 1e+6;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Grams is equal to %.6f Tonns. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
                 break;
         }
 }
@@ -217,35 +189,23 @@ int convertHW(float value, char choice)
         {
         case 'a':
                 result = value * 100000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hundredweight is equal to %.2f Grams. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'b':
                 result = value * 100;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hundredweight is equal to %.2f Kilograms. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'c':
                 result = value / 10;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hundredweight is equal to %.2f Tons. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'd':
                 result = value * 220.5;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hundredweight is equal to %.2f Pounds. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
+                
                 break;
         }
 }
@@ -256,42 +216,27 @@ int convertSEC(float value, char choice)
         {
         case 'a':
                 result = value / 60;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.3f Minutes. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'b':
                 result = value / 3600;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.5f Hours. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'c':
                 result = value / 86400;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.6f Days. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'd':
                 result = value / 2592000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.9f Months. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'e':
                 result = value / 31536000;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Seconds is equal to %.10f Years. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
+                
                 break;
         }
 }
@@ -302,42 +247,27 @@ int convertMIN(float value, char choice)
         {
         case 'a':
                 result = value * 60;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Minutes is equal to %.2f Seconds. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'b':
                 result = value / 60;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Minutes is equal to %.3f Hours. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'c':
                 result = value / 1440;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Minutes is equal to %.4f Days. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'd':
                 result = value / 43200;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Minutes is equal to %.6f Months. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'e':
                 result = value / 525600;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Minutes is equal to %.7f Years. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
+                
                 break;
         }
 }
@@ -348,42 +278,27 @@ int convertHOUR(float value, char choice)
         {
         case 'a':
                 result = value * 3600;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hours is equal to %.2f Seconds. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'b':
                 result = value * 60;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hours is equal to %.2f Minutes. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
         case 'c':
                 result = value / 24;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hours is equal to %.2f Days. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'd':
                 result = value / 730;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hours is equal to %.3f Months. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+               
                 return result;
         case 'e':
                 result = value / 8760;
-                printf("\n\n");
-                printf("+-----------------------------------------------------------+\n");
-                printf("| Your answer is: %.2f Hours is equal to %.4f Years. \n", value, result);
-                printf("+-----------------------------------------------------------+\n");
+                
                 return result;
 
         default:
-                printf("| Invalid choice. |\n");
+                
                 break;
         }
 }
