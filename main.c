@@ -10,6 +10,8 @@ int main()
     char choice;
     extern float result;
 
+    extern float result;
+
     printf("\n\n\n");
 
     const char *letters[] = {
@@ -30,13 +32,8 @@ int main()
 
     for (i = 0; i < 10; i++)
     {
-        printf("\033[0;35;1m");
         printf("%s\n", letters[i]);
-        printf("\033[0m");
     }
-
-    printf("\033[0;37;1m"); // установка цвета (белый)
-
     printf("\n\n\n");
     printf("-------------|-------------|-----------------|------------|------------|\n");
     printf("|-------------|------------|  CONVERSION IN  |------------|------------|\n");
@@ -109,14 +106,11 @@ int main()
 
     if (value != (int)value)
     {
-        printf("\033[0;31m"); // установка красного цвета
         printf("+--------------------------------+\n");
         printf("|input error: not a numeric value|\n");
         printf("+--------------------------------+\n");
-        printf("\033[0m"); // убираем
         return 0;
     }
-    printf("\033[0;37;1m"); // установка цвета (белый)
 
     printf("+---------------------------+\n");
     printf("| Enter a unit:|          ");
@@ -129,16 +123,13 @@ int main()
     {
         if (isdigit(units[P]))
         {
-            printf("\033[0;31m"); // установка красного цвета
             printf("+------------------------------------+\n");
             printf("|input error: incorrect value entered|\n");
             printf("+------------------------------------+\n");
-            printf("\033[0m"); // убираем
             return 1;
         }
         P++;
     }
-    printf("\033[0;37;1m"); // установка цвета (белый)
 
     int isValidUnit = 0;
     while (!isValidUnit)
@@ -193,7 +184,34 @@ int main()
             printf("+---------------------------+\n");
             convertationM(value, choice);
             printf("\n\n");
-            isValidUnit = 1;
+             if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f meters is equal to %.2f centimeters. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f meters is equal to %.3f kilometers. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else if (choice == "c") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f meters is equal to %.5f miles. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else if (choice == "d") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f meters is equal to %.2f foot. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else {
+                printf("| Invalid choice. |\n");
+             }
+             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ МИЛЛИМЕТРЫ)
         else if (strcmp(units, "mm") == 0)
@@ -214,6 +232,33 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertMM(value, choice);
+            if (choice == 'a') {
+                 printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Millimeters is equal to %.2f Centimeters. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Millimeters is equal to %.2f Meters. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Millimeters is equal to %.2f Kilometers. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Millimeters is equal to %.5f Pouns. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                printf("| Invalid choice. |\n");
+            }
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ ЦЕЛЬСИЯ)
@@ -231,7 +276,22 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertC(value, choice);
-            isValidUnit = 1;
+            if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Celsius is equal to %.2f Fahrenheit. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Celsius is equal to %.2f Kelvins. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                 printf("| Invalid choice. |\n");
+                 isValidUnit = 1;
+            }
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ КЕЛЬВИНЫ)
         else if (strcmp(units, "k") == 0)
@@ -248,7 +308,22 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertK(value, choice);
-            isValidUnit = 1;
+             if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f kelvin is equal to %.2f Fahrenheit. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f kelvin is equal to %.2f Celsius. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+             }
+             else {
+                printf("| Invalid choice. |\n");
+             }
+             isValidUnit = 1;
         }
 
         // орпеделяем, какую еединцу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ ФАРЕНГЕЙТЫ)
@@ -266,6 +341,21 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertF(value, choice);
+            if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Fahrenheit is equal to %.2f Kelvin. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                 printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Fahrenheit is equal to %.2f Celsius. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                printf("| Invalid choice. |\n");
+            }
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ КИЛОГРАММЫ)
@@ -281,6 +371,7 @@ int main()
             printf("+---------------------------+\n");
             printf("| d) |            | KG to CR  |\n");
             printf("+---------------------------+\n");
+           
 
             printf("+---------------------------+\n");
             printf("| Enter a choise:|         ");
@@ -672,6 +763,39 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertDAY(value, choice);
+            if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Days is equal to %.2f Seconds. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Days is equal to %.2f Minutes. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "c") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Days is equal to %.2f Hours. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "d") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Days is equal to %.3f Months. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "e") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Days is equal to %.4f Years. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                printf("| Invalid choice. |\n");
+            }
             
             isValidUnit = 1;
         }
@@ -696,6 +820,39 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertMONTH(value, choice);
+            if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Months is equal to %.7f Seconds. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Months is equal to %.6f Minutes. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "c") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Months is equal to %.2f Days. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "d") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Months is equal to %.2f Days. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "e") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Months is equal to %.2f Years. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                printf("| Invalid choice. |\n");
+            }
             isValidUnit = 1;
         }
         // определяем с клавиатуры, какую единицу измерения ввели (в данном случае года)
@@ -719,6 +876,39 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertYEAR(value, choice);
+            if (choice == "a") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Years is equal to %.8f Seconds. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "b") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Years is equal to %.7f Minutes. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "c") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Years is equal to %.4f Hours. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "d") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Years is equal to %.3f Days. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else if (choice == "e") {
+                printf("\n\n");
+                printf("+-----------------------------------------------------------+\n");
+                printf("| Your answer is: %.2f Years is equal to %.2f Months. \n", value, result);
+                printf("+-----------------------------------------------------------+\n");
+            }
+            else {
+                printf("| Invalid choice. |\n");
+            }
             isValidUnit = 1;
         }
         else
@@ -729,6 +919,6 @@ int main()
             isValidUnit = 1;
         }
     }
-    printf("\033[0m");
+
     return 0;
 }
