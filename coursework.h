@@ -15,4 +15,4 @@ int convertHOUR(float value, char choice);
 int convertDAY(float value, char choice);
 int convertMONTH(float value, char choice);
 int convertYEAR(float value, char choice);
-блин препод по ТРПО такой классный)0))
+блин препод по ТРПО такой классный))
