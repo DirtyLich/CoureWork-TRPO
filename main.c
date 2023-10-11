@@ -158,7 +158,7 @@ int main()
             printf("+---------------------------+\n");
             convertSM(value, choice);
             printf("\n\n");
-<<<<<<< HEAD
+
             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
@@ -186,10 +186,10 @@ int main()
                 printf("| Invalid choice. |\n");
             }
              isValidUnit = 1;
-=======
+
             
             isValidUnit = 1;
->>>>>>> 4d4dcfc45544fcd64d7ccfa14b58476451739e8d
+
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры(В ДДАННОМ СЛУЧАЕ МЕТРЫ!!)
@@ -793,7 +793,7 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertDAY(value, choice);
-<<<<<<< HEAD
+
             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
@@ -827,8 +827,7 @@ int main()
             else {
                 printf("| Invalid choice. |\n");
             }
-=======
->>>>>>> 4d4dcfc45544fcd64d7ccfa14b58476451739e8d
+
             
             isValidUnit = 1;
         }
