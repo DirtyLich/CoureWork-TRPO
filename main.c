@@ -187,7 +187,7 @@ int main()
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры(В ДДАННОМ СЛУЧАЕ МЕТРЫ!!)
-        if (strcmp(units, "m") == 0)
+        else if (strcmp(units, "m") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -238,7 +238,7 @@ int main()
              isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ МИЛЛИМЕТРЫ)
-        if (strcmp(units, "mm") == 0)
+        else if (strcmp(units, "mm") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -286,7 +286,7 @@ int main()
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ ЦЕЛЬСИЯ)
-        if (strcmp(units, "c") == 0)
+        else if (strcmp(units, "c") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -319,7 +319,7 @@ int main()
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ КЕЛЬВИНЫ)
-        if (strcmp(units, "k") == 0)
+        else if (strcmp(units, "k") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -352,7 +352,7 @@ int main()
         }
 
         // орпеделяем, какую еединцу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ ФАРЕНГЕЙТЫ)
-        if (strcmp(units, "f") == 0)
+        else if (strcmp(units, "f") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -384,7 +384,7 @@ int main()
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ КИЛОГРАММЫ)
-        if (strcmp(units, "kg") == 0)
+        else if (strcmp(units, "kg") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -435,13 +435,14 @@ int main()
                 printf("| Your answer is: %.2f Kilograms is equal to %.2f Carrats. \n", value, result);
                 printf("+-----------------------------------------------------------+\n"); 
                 }
-                else
+                else {
                     printf("| Invalid choice. |\n");
+                }
             isValidUnit = 1;
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ ГРАММЫ)
-        if (strcmp(units, "gr") == 0)
+        else if (strcmp(units, "gr") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -502,13 +503,14 @@ int main()
                 printf("+-----------------------------------------------------------+\n");
             }
 
-            else
+            else{
                 printf("| Invalid choice. |\n");
+            }
             isValidUnit = 1;
         }
 
         // определяем, какую единицу измеерения ввеели с клавиатуры ( В ДАННОМ СЛУЧАЕ ЦЕНТНЕРЫ)
-        if (strcmp(units, "hw") == 0)
+        else if (strcmp(units, "hw") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -559,13 +561,13 @@ int main()
                 printf("+-----------------------------------------------------------+\n");
             }
 
-            else 
+            else{ 
                 printf("| Invalid choice. |\n");
-
+            }
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (В ДАННОМ СЛУЧАЕ СЕКУНДЫ)
-        if (strcmp(units, "sec") == 0)
+        else if (strcmp(units, "sec") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -626,14 +628,14 @@ int main()
                 printf("+-----------------------------------------------------------+\n");
             }
             
-            else
+            else{
                 printf("| Invalid choice. |\n");
-
+            }
             isValidUnit = 1;
         }
 
         // определяем, какую единицу измерения ввели  клавиатуры (в данном случае минуты)
-        if (strcmp(units, "min") == 0)
+        else if (strcmp(units, "min") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -694,13 +696,13 @@ int main()
                 printf("+-----------------------------------------------------------+\n");
             }
 
-            else
+            else{
                 printf("| Invalid choice. |\n");
-
+            }
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры ( в данном случае часы)
-        if (strcmp(units, "hour") == 0)
+        else if (strcmp(units, "hour") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -761,14 +763,14 @@ int main()
                 printf("+-----------------------------------------------------------+\n");
             }
 
-            else 
+            else{ 
                 printf("| Invalid choice. |\n");
-
+            }
             isValidUnit = 1;
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры (в дданном случае дни)
-        if (strcmp(units, "day") == 0)
+        else if (strcmp(units, "day") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -825,7 +827,7 @@ int main()
         }
         
         // определяем, какую единицу измерения ввели с клавиатуры (в данном случае месяца)
-        if (strcmp(units, "month") == 0)
+        else if (strcmp(units, "month") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
@@ -881,7 +883,7 @@ int main()
             isValidUnit = 1;
         }
         // определяем с клавиатуры, какую единицу измерения ввели (в данном случае года)
-        if (strcmp(units, "year") == 0)
+        else if (strcmp(units, "year") == 0)
         {
             printf("|    Choose conversion:     |\n");
             printf("+---------------------------+\n");
