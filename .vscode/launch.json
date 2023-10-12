@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/Documents/GitHub/CoureWork-TRPO",
-      "program": "c:/Users/User/Documents/GitHub/CoureWork-TRPO/build/Debug/outDebug",
+      "cwd": "d:/VS.main()/trpo/CoureWork-TRPO",
+      "program": "d:/VS.main()/trpo/CoureWork-TRPO/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
