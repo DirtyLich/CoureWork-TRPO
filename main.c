@@ -156,11 +156,8 @@ int main()
             printf("+---------------------------+\n");
             convertSM(value, choice);
             printf("\n\n");
-<<<<<<< HEAD
             if (choice == 'a') {
-=======
-             if (choice == 'a') {
->>>>>>> 67a1bfd5580e0dd956e4e333cc1ba8d1e8e2cc39
+
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f centimeters is equal to %.3f Meters. \n", value, result);
@@ -187,10 +184,6 @@ int main()
                 printf("| Invalid choice. |\n");
             }
             isValidUnit = 1;
-<<<<<<< HEAD
-
-=======
->>>>>>> 67a1bfd5580e0dd956e4e333cc1ba8d1e8e2cc39
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры(В ДДАННОМ СЛУЧАЕ МЕТРЫ!!)
@@ -797,10 +790,6 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertDAY(value, choice);
-<<<<<<< HEAD
-=======
-
->>>>>>> 67a1bfd5580e0dd956e4e333cc1ba8d1e8e2cc39
             if (choice == 'a') {
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
@@ -834,17 +823,8 @@ int main()
             else {
                 printf("| Invalid choice. |\n");
             }
-<<<<<<< HEAD
             isValidUnit = 1;
         }
-        
-=======
-            
-            isValidUnit = 1;
-        }
-        
-        
->>>>>>> 67a1bfd5580e0dd956e4e333cc1ba8d1e8e2cc39
         // определяем, какую единицу измерения ввели с клавиатуры (в данном случае месяца)
         else if (strcmp(units, "month") == 0)
         {
@@ -965,10 +945,5 @@ int main()
             isValidUnit = 1;
         }
     }
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 67a1bfd5580e0dd956e4e333cc1ba8d1e8e2cc39
     return 0;
 }
