@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <../thirdparty/ctest.h>
-#include "../src/LibConvert/coursework.h" // заголовочный файл с функциями
+#include "../src/LibConvert/coursework.h"
+#include <ctest.h>
+#include "../thirdparty/ctest.h" // заголовочный файл с функциями
 
 //проверка сантиметров
 CTEST(CONVERT_SM, test_A) {
