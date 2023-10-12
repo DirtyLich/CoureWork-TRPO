@@ -1,6 +1,6 @@
-#include <ctest.h>
-#define CTEST_MAIN
 
+#define CTEST_MAIN
+#include <ctest.h>
 // uncomment lines below to enable/disable features. See README.md for details
 #define CTEST_SEGFAULT
 //#define CTEST_NO_COLORS

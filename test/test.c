@@ -26,183 +26,183 @@ CTEST(CONVERT_SM, test_D) {
 }
 
 //проверка метров
-CTEST(CONVERT_M, test_A) {
+CTEST(CONVERTM, testA) {
     float result = convertationM(100, 'a');
     ASSERT_DBL_NEAR(10000, result);
 }
 
-CTEST(CONVERT_M, test_B) {
+CTEST(CONVERTM, testB) {
     float result = convertationM(1000, 'b');
     ASSERT_DBL_NEAR(1, result);
 }
 
-CTEST(CONVERT_M, test_С) {
+CTEST(CONVERTM, testC) {
     float result = convertationM(4276, 'c');
     ASSERT_DBL_NEAR(4, result);
 }
 
-CTEST(CONVERT_M, test_D) {
+CTEST(CONVERTM, testD) {
     float result = convertationM(4, 'd');
     ASSERT_DBL_NEAR_TOL(13.12, result, 0.01); 
 }
 
 //проверка миллиметров
-CTEST(CONVERT_MM, test_A) {
+CTEST(CONVERTMM, testA) {
     float result = convertMM(100, 'a');
     ASSERT_DBL_NEAR(10, result);
 }
 
-CTEST(CONVERT_MM, test_B) {
+CTEST(CONVERTMM, testB) {
     float result = convertMM(1000, 'b');
     ASSERT_DBL_NEAR(1, result);
 }
 
-CTEST(CONVERT_MM, test_C) {
+CTEST(CONVERTMM, testC) {
     float result = convertMM(10000, 'c');
     ASSERT_DBL_NEAR_TOL(10000000000.00, result, 0.01); 
 }
 
-CTEST(CONVERT_MM, test_D) {
+CTEST(CONVERTMM, testD) {
     float result = convertMM(1000, 'd');
     ASSERT_DBL_NEAR_TOL(3.28084, result, 0.01);
 }
 
 //проверка цельсия
-CTEST(CONVERT_C, test_A) {
+CTEST(CONVERTC, testA) {
     float result = convertC(6, 'a');
     ASSERT_DBL_NEAR_TOL(42.8, result, 0.01); 
 }
 
-CTEST(CONVERT_C, test_B) {
+CTEST(CONVERTC, testB) {
     float result = convertC(100, 'b');
     ASSERT_DBL_NEAR(373, result);
 }
 
 //проверка кельвины
-CTEST(CONVERT_K, test_A) {
+CTEST(CONVERTK, testA) {
     float result = convertK(300, 'a');
     ASSERT_DBL_NEAR_TOL(80.6, result, 0.01); 
 }
 
-CTEST(CONVERT_K, test_B) {
+CTEST(CONVERTK, testB) {
     float result = convertK(100, 'b');
     ASSERT_DBL_NEAR(-173, result);
 }
 
 //проверка фаренгейт
-CTEST(CONVERT_F, test_A) {
+CTEST(CONVERTF, testA) {
     float result = convertF(300, 'a');
     ASSERT_DBL_NEAR_TOL(422.04, result, 0.01); 
 }
 
-CTEST(CONVERT_F, test_B) {
+CTEST(CONVERTF, testB) {
     float result = convertF(32, 'b');
     ASSERT_DBL_NEAR(0, result); 
 }
 
 //проверка килограммов
-CTEST(CONVERT_KG, test_A) {
+CTEST(CONVERTKG, testA) {
     float result = convertKG(1, 'a');
     ASSERT_DBL_NEAR(1000, result); 
 }
 
-CTEST(CONVERT_KG, test_B) {
+CTEST(CONVERTKG, testB) {
     float result = convertKG(4, 'b');
     ASSERT_DBL_NEAR_TOL(8.82, result, 0.01);
 }
 
-CTEST(CONVERT_KG, test_C) {
+CTEST(CONVERTKG, testC) {
     float result = convertKG(1, 'c');
     ASSERT_DBL_NEAR_TOL(1000000.0, result, 0.01);
 }
 
-CTEST(CONVERT_KG, test_D) {
+CTEST(CONVERTKG, testD) {
     float result = convertKG(1, 'd');
      ASSERT_DBL_NEAR(5000, result);
 }
 
 //проверка граммов
-CTEST(CONVERT_GR, test_A) {
+CTEST(CONVERTGR, testA) {
     float result = convertGR(10000, 'a');
     ASSERT_DBL_NEAR(10, result); 
 }
 
-CTEST(CONVERT_GR, test_B) {
+CTEST(CONVERTGR, testB) {
     float result = convertGR(1, 'b');
     ASSERT_DBL_NEAR(1000, result); 
 }
 
-CTEST(CONVERT_GR, test_C) {
+CTEST(CONVERTGR, testC) {
     float result = convertGR(400, 'c');
     ASSERT_DBL_NEAR_TOL(0.88, result, 0.01);
 }
 
-CTEST(CONVERT_GR, test_D) {
+CTEST(CONVERTGR, testD) {
     float result = convertGR(10, 'd');
     ASSERT_DBL_NEAR(50, result);
 }
 
-CTEST(CONVERT_GR, test_E) {
+CTEST(CONVERTGR, testE) {
     float result = convertGR(15, 'e');
     ASSERT_DBL_NEAR_TOL(0.0015, result, 0.01);
 }
 
 //проверка центнеров
-CTEST(CONVERT_HW, test_A) {
+CTEST(CONVERTHW, testA) {
     float result = convertHW(1, 'a');
     ASSERT_DBL_NEAR(100000, result);
 }
 
-CTEST(CONVERT_HW, test_B) {
+CTEST(CONVERTHW, testB) {
     float result = convertHW(1, 'b');
     ASSERT_DBL_NEAR(100, result);
 }
 
-CTEST(CONVERT_HW, test_C) {
+CTEST(CONVERTHW, testC) {
     float result = convertHW(100, 'c');
     ASSERT_DBL_NEAR(10, result);
 }
 
 //проверка секунд
-CTEST(CONVERT_SEC, test_A) {
+CTEST(CONVERTSEC, testA) {
     float result = convertSEC(360, 'a');
     ASSERT_DBL_NEAR(6, result);
 }
 
-CTEST(CONVERT_SEC, test_B) {
+CTEST(CONVERTSEC, testB) {
     float result = convertSEC(3600, 'b');
     ASSERT_DBL_NEAR(1, result);
 }
 
 //проверка минут
-CTEST(CONVERT_MIN, test_A) {
+CTEST(CONVERTMIN, testA) {
     float result = convertMIN(6, 'a');
     ASSERT_DBL_NEAR(360, result);
 }
 
-CTEST(CONVERT_MIN, test_B) {
+CTEST(CONVERTMIN, testB) {
     float result = convertMIN(60, 'b');
     ASSERT_DBL_NEAR(1, result);
 }
 
 //проверка часов
-CTEST(CONVERT_HOUR, test_A) {
+CTEST(CONVERTHOUR, testA) {
     float result = convertHOUR(1, 'a');
     ASSERT_DBL_NEAR(3600, result);
 }
 
-CTEST(CONVERT_HOUR, test_B) {
+CTEST(CONVERTHOUR, testB) {
     float result = convertHOUR(1, 'b');
     ASSERT_DBL_NEAR(60, result);
 }
 
 //проверка дней
-CTEST(CONVERT_DAY, test_A) {
+CTEST(CONVERTDAY, testA) {
     float result = convertDAY(1, 'a');
     ASSERT_DBL_NEAR(86400, result);
 }
 
-CTEST(CONVERT_DAY, test_B) {
+CTEST(CONVERTDAY, testB) {
     float result = convertDAY(10, 'b');
     ASSERT_DBL_NEAR(14400, result);
 }
