@@ -158,7 +158,6 @@ int main()
             printf("+---------------------------+\n");
             convertSM(value, choice);
             printf("\n\n");
-<<<<<<< HEAD
 
             if (choice == 'a') {
                 printf("\n\n");
@@ -187,14 +186,6 @@ int main()
                 printf("| Invalid choice. |\n");
             }
              isValidUnit = 1;
-
-            
-            isValidUnit = 1;
-
-=======
-            
-            isValidUnit = 1;
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
         }
 
         // определяем, какую единицу измерения ввели с клавиатуры(В ДДАННОМ СЛУЧАЕ МЕТРЫ!!)
@@ -798,12 +789,11 @@ int main()
             scanf(" %c", &choice);
             printf("+---------------------------+\n");
             convertDAY(value, choice);
-<<<<<<< HEAD
+
+
+
 
             if (choice == 'a') {
-=======
-            if (choice == "a") {
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
                 printf("\n\n");
                 printf("+-----------------------------------------------------------+\n");
                 printf("| Your answer is: %.2f Days is equal to %.2f Seconds. \n", value, result);
@@ -836,11 +826,6 @@ int main()
             else {
                 printf("| Invalid choice. |\n");
             }
-<<<<<<< HEAD
-
-=======
->>>>>>> ca6a23bc1e799aebcddd2a77fda770a54edccde5
-            
             isValidUnit = 1;
         }
         // определяем, какую единицу измерения ввели с клавиатуры (в данном случае месяца)
