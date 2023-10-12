@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LDFLAGS =
@@ -27,7 +26,6 @@ test.o: coursework.h test.h
 
 clean:
 rm -f app test *.o
-=======
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LDFLAGS =
@@ -56,4 +54,3 @@ test.o: coursework.h test.h
 
 clean:
 	rm -f app test *.o
->>>>>>> fcf1fdbb9f9326798269773bfb44f32a7b331eb5
