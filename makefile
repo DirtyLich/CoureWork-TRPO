@@ -1,56 +1,68 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -I src -I thirdparty -MP -MMD
 LDFLAGS =
+LDLIBS = -lm
 
-# Первая задача: сборка приложения для простого использования
-app: coursework.o main.o
-$(CC) $(LDFLAGS) -o app coursework.o main.o
+BIN_DIR = bin
+OBJ_DIR = obj
+SRC_DIR = src
+TEST_DIR = test
+THIRDPARTY_DIR = thirdparty
 
-coursework.o: coursework.c coursework.h
-$(CC) $(CFLAGS) -c coursework.c
+APP_NAME = your_application_name
+LIB_NAME = LibConvert
+TEST_NAME = test
 
-main.o: main.c coursework.h
-$(CC) $(CFLAGS) -c main.c
+APP_PATH = $(BIN_DIR)/$(APP_NAME)
+LIB_PATH = $(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/$(LIB_NAME).a
+TEST_PATH = $(BIN_DIR)/$(TEST_NAME)
 
-# Вторая задача: запуск тестов
-test: coursework.o test.o
-$(CC) $(LDFLAGS) -o test coursework.o test.o
+SRC_EXT = c
+APP_SOURCES = $(shell find $(SRC_DIR) -type f -name '*.$(SRC_EXT)' -not -path "$(SRC_DIR)/$(LIB_NAME)/*")
+APP_OBJECTS = $(APP_SOURCES:$(SRC_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/%.o)
 
-test.o: test.c coursework.h test.h
-$(CC) $(CFLAGS) -c test.c
+LIB_SOURCES = $(shell find $(SRC_DIR)/$(LIB_NAME) -type f -name '*.$(SRC_EXT)')
+LIB_OBJECTS = $(LIB_SOURCES:$(SRC_DIR)/$(LIB_NAME)/%.$(SRC_EXT)=$(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/%.o)
 
-# Общие зависимости
-coursework.o: coursework.h
-main.o: coursework.h
-test.o: coursework.h test.h
+TEST_SOURCES = $(shell find $(TEST_DIR) -type f -name '*.$(SRC_EXT)')
+TEST_OBJECTS = $(TEST_SOURCES:$(TEST_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/%.o)
+
+DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d) $(TEST_OBJECTS:.o=.d)
+
+.PHONY: all
+all: $(APP_PATH)
+
+-include $(DEPS)
+
+$(APP_PATH): $(APP_OBJECTS) $(LIB_PATH)
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+
+$(LIB_PATH): $(LIB_OBJECTS)
+	ar rcs $@ $^
+
+$(OBJ_DIR)/%.o: %.c
+	@mkdir -p $(@D)
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+.PHONY: run clean test run_test
+
+run: $(APP_PATH)
+	./$(APP_PATH)
+
+run_test: $(TEST_PATH)
+	./$(TEST_PATH)
 
 clean:
-rm -f app test *.o
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
-LDFLAGS =
+	$(RM) $(APP_PATH) $(OBJ_DIR)/*/*.[aod]
+	$(RM) $(LIB_PATH)
+	$(RM) $(TEST_PATH)
 
-# Первая задача: сборка приложения для простого использования
-app: coursework.o main.o
-	$(CC) $(LDFLAGS) -o app coursework.o main.o
+test: $(TEST_PATH)
 
-coursework.o: coursework.c coursework.h
-	$(CC) $(CFLAGS) -c coursework.c
+-include $(DEPS)
 
-main.o: main.c coursework.h
-	$(CC) $(CFLAGS) -c main.c
-
-# Вторая задача: запуск тестов
-test: coursework.o test.o
-	$(CC) $(LDFLAGS) -o test coursework.o test.o
-
-test.o: test.c coursework.h test.h
-	$(CC) $(CFLAGS) -c test.c
-
-# Общие зависимости
-coursework.o: coursework.h
-main.o: coursework.h
-test.o: coursework.h test.h
-
-clean:
-	rm -f app test *.o
+$(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
