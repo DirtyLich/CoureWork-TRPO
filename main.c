@@ -892,7 +892,7 @@ int main()
             printf("+---------------------------+\n");
             printf("| c) |           | YEARS to HOURS |\n");
             printf("+---------------------------+\n");
-            printf("| c) |           | YEARS to DAYS  |\n");
+            printf("| d) |           | YEARS to DAYS  |\n");
             printf("+---------------------------+\n");
             printf("| e) |           | YEARS to MONTHS |\n");
             printf("+---------------------------+\n");

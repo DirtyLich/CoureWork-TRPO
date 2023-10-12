@@ -213,7 +213,51 @@ CTEST(CONVERT_DAY, test_C) {
 
 //проверка месяца
 CTEST(CONVERT_MONTH, test_A) {
-    float result = convertMONTH(15, 'a');
-    ASSERT_DBL_NEAR_TOL(0.0015, result, 0.01);
+    float result = convertMONTH(1, 'a');
+    ASSERT_DBL_NEAR_TOL(2.6, result, 1e-5);
 }
 
+CTEST(CONVERT_MONTH, test_B) {
+    float result = convertMONTH(1, 'b');
+    ASSERT_DBL_NEAR(43800, result,);
+}
+
+CTEST(CONVERT_MONTH, test_C) {
+    float result = convertMONTH(1, 'c');
+    ASSERT_DBL_NEAR(730, result,);
+}
+
+CTEST(CONVERT_MONTH, test_D) {
+    float result = convertMONTH(1, 'd');
+    ASSERT_DBL_NEAR_TOL(30, result, 0.01);
+}
+
+CTEST(CONVERT_MONTH, test_E) {
+    float result = convertMONTH(12, 'e');
+    ASSERT_DBL_NEAR(1, result,);
+}
+//для года
+CTEST(CONVERT_YEAR, test_A) {
+    float result = convertYEAR(1, 'a');
+    ASSERT_DBL_NEAR_TOL(3, result, 1e-7);
+}
+
+CTEST(CONVERT_YEAR, test_B) {
+    float result = convertYEAR(1, 'b');
+    ASSERT_DBL_NEAR_TOL(5, result, 1e-5);
+}
+
+CTEST(CONVERT_YEAR, test_C) {
+    float result = convertYEAR(1, 'c');
+    ASSERT_DBL_NEAR(8760, result,);
+}
+
+CTEST(CONVERT_YEAR, test_D) {
+    float result = convertYEAR(1, 'd');
+    ASSERT_DBL_NEAR(365, result,);
+}
+
+CTEST(CONVERT_YEAR, test_E) {
+    float result = convertYEAR(1, 'e');
+    ASSERT_DBL_NEAR(12, result,);
+}
