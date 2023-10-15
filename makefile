@@ -48,9 +48,6 @@ $(OBJ_DIR)/%.o: %.c
 
 .PHONY: run clean test run_test
 
-test:
-    ./bin/test
-
 run:
 	./bin/Convert
 
