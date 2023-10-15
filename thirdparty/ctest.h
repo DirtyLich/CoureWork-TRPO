@@ -32,7 +32,7 @@ union ctest_run_func_union {
 /* the GCC argument will work for both gcc and clang  */
 #define CTEST_IMPL_DIAG_PUSH_IGNORED(w) \
     CTEST_IMPL_PRAGMA(GCC diagnostic push) \
-    CTEST_IMPL_PRAGMA(GCC diagnostic ignored "-W" #w)\
+    CTEST_IMPL_PRAGMA(GCC diagnostic ignored "-W" #w)
 #define CTEST_IMPL_DIAG_POP() \
     CTEST_IMPL_PRAGMA(GCC diagnostic pop)
 #else
