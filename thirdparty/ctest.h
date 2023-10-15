@@ -25,7 +25,7 @@ union ctest_run_func_union {
     ctest_unary_run_func unary;
 };
 
-#define CTEST_IMPL_PRAGMA(x) _Pragma (#x)
+//#define CTEST_IMPL_PRAGMA(x) _Pragma (#x)
 
 #if defined(__GNUC__)
 #if defined(__clang__) || __GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 6)
@@ -45,7 +45,7 @@ union ctest_run_func_union {
 /* leave them out entirely for non-GNUC compilers  */
 #define CTEST_IMPL_DIAG_PUSH_IGNORED(w)
 #define CTEST_IMPL_DIAG_POP()
-#endif
+#endif//
 
 struct ctest {
     const char* ssname;  // suite name
