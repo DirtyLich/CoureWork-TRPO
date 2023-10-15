@@ -20,5 +20,3 @@ jobs:
 
       - name: Build runtest
         run: make run_test
-
-        
