@@ -4,7 +4,7 @@ APP_NAME = Convert
 LIB_NAME = LibConvert
 TEST_NAME = test
 
-CFLAGS = -Wall -Wextra -W -Werror
+CFLAGS = -Wall -Werror
 CPPFLAGS = -I src -MP -MMD
 CPPFLAGST = -I thirdparty -MP -MMD
 LDFLAGS =
