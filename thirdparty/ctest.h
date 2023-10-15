@@ -45,6 +45,8 @@ union ctest_run_func_union {
 #if defined(__GNUC__)
 #if defined(__clang__) || __GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 6)
 /* the GCC argument will work for both gcc and clang  */
+#define CTEST_IMPL_DIAG_PUSH_IGNORED(w) \
+    CTEST_IMPL_PRAGMA(GCC diagnostic push) \
 #define CTEST_IMPL_DIAG_POP() \
     CTEST_IMPL_PRAGMA(GCC diagnostic pop)
 #else
